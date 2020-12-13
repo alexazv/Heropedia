@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDelegate, UICollectionViewDataSource {
+class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView?
     weak var coordinator: MainCoordinator?
@@ -26,25 +26,36 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     }
     
     private func onViewModelUpdate() {
-        DispatchQueue.main.async {
-            self.collectionView?.reloadData()
+        
+        guard let count = self.viewModel?.heroes.count,
+              let lastCount = self.viewModel?.lastCount,
+              count > lastCount else {
+            return
         }
+        
+        let startIndex = count - lastCount
+        let endIndex = count
+        let indexPaths = (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+        
+        collectionView?.performBatchUpdates({
+            self.collectionView?.insertItems(at: indexPaths)
+        })
     }
     
     private func onItemClick(index: Int) {
-        guard let heroId = viewModel?.heroes?[index].heroId else { return }
+        guard let heroId = viewModel?.heroes[index].heroId else { return }
         coordinator?.goToDetails(heroId: heroId)
     }
     
     // MARK: Collection View
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.heroes?.count ?? 0
+        return viewModel?.heroes.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HeroCollectionViewCell
-        cell.setup(hero: viewModel?.heroes?[indexPath.item])
+        cell.setup(hero: viewModel?.heroes[indexPath.item])
         return cell
     }
     
@@ -54,6 +65,16 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         onItemClick(index: indexPath.item)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        guard let collectionView = self.collectionView,
+              scrollView.contentOffset.y > collectionView.contentSize.height - scrollView.frame.height else {
+            return
+        }
+        
+        viewModel?.onReachEnd()
     }
 }
 

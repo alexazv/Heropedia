@@ -8,6 +8,6 @@
 import Foundation
 
 protocol HeroDataSource {
-    func getItems(completion: @escaping ([Hero]?, Error?) -> Void )
+    func getItems(page: Int, completion: @escaping ([Hero]?, Error?) -> Void )
     func getDetail(heroId: Int, completion: @escaping (HeroDetail?, Error?) -> Void )
 }
