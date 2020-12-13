@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD56FDC7C34FB20C7DE7FEB /* Pods_Heropedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31567701E45F45750B23BCE0 /* Pods_Heropedia.framework */; };
+		ACA578132586967100B967E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578122586967100B967E2 /* AppDelegate.swift */; };
+		ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578142586967100B967E2 /* SceneDelegate.swift */; };
+		ACA578172586967100B967E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578162586967100B967E2 /* ViewController.swift */; };
+		ACA5781A2586967100B967E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA578182586967100B967E2 /* Main.storyboard */; };
+		ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781B2586967300B967E2 /* Assets.xcassets */; };
+		ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */; };
+		ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578292586967300B967E2 /* HeropediaTests.swift */; };
+		ACA578352586967400B967E2 /* HeropediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578342586967400B967E2 /* HeropediaUITests.swift */; };
+		B1356AC68DE07CAC12BE0ACF /* Pods_Heropedia_HeropediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */; };
+		E217A2C2F8363052306DC533 /* Pods_HeropediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACA578262586967300B967E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACA578072586967100B967E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACA5780E2586967100B967E2;
+			remoteInfo = Heropedia;
+		};
+		ACA578312586967400B967E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACA578072586967100B967E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACA5780E2586967100B967E2;
+			remoteInfo = Heropedia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E31F59418D87C653951C6FD /* Pods-Heropedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia.debug.xcconfig"; path = "Target Support Files/Pods-Heropedia/Pods-Heropedia.debug.xcconfig"; sourceTree = "<group>"; };
+		31567701E45F45750B23BCE0 /* Pods_Heropedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Heropedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		577D4E72AFB15D621EA50A9B /* Pods-Heropedia-HeropediaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia-HeropediaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E06F4A291C914583724A71A /* Pods-HeropediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeropediaTests.release.xcconfig"; path = "Target Support Files/Pods-HeropediaTests/Pods-HeropediaTests.release.xcconfig"; sourceTree = "<group>"; };
+		714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Heropedia_HeropediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AAD164DB93FBC9BDA88675 /* Pods-Heropedia-HeropediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia-HeropediaUITests.release.xcconfig"; path = "Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ACA5780F2586967100B967E2 /* Heropedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heropedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA578122586967100B967E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACA578142586967100B967E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ACA578162586967100B967E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACA578192586967100B967E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACA5781B2586967300B967E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACA5781E2586967300B967E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACA578202586967300B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA578252586967300B967E2 /* HeropediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeropediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA578292586967300B967E2 /* HeropediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeropediaTests.swift; sourceTree = "<group>"; };
+		ACA5782B2586967300B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA578302586967400B967E2 /* HeropediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeropediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA578342586967400B967E2 /* HeropediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeropediaUITests.swift; sourceTree = "<group>"; };
+		ACA578362586967400B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeropediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeropediaTests.debug.xcconfig"; path = "Target Support Files/Pods-HeropediaTests/Pods-HeropediaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F94BAA1F6BB78AAF8E216071 /* Pods-Heropedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia.release.xcconfig"; path = "Target Support Files/Pods-Heropedia/Pods-Heropedia.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACA5780C2586967100B967E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD56FDC7C34FB20C7DE7FEB /* Pods_Heropedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA578222586967300B967E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E217A2C2F8363052306DC533 /* Pods_HeropediaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA5782D2586967400B967E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1356AC68DE07CAC12BE0ACF /* Pods_Heropedia_HeropediaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F4F15D644928FBF393BD008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31567701E45F45750B23BCE0 /* Pods_Heropedia.framework */,
+				714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */,
+				E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACA578062586967100B967E2 = {
+			isa = PBXGroup;
+			children = (
+				ACA578112586967100B967E2 /* Heropedia */,
+				ACA578282586967300B967E2 /* HeropediaTests */,
+				ACA578332586967400B967E2 /* HeropediaUITests */,
+				ACA578102586967100B967E2 /* Products */,
+				B2B915276EA8F5C806AFE5B9 /* Pods */,
+				2F4F15D644928FBF393BD008 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ACA578102586967100B967E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACA5780F2586967100B967E2 /* Heropedia.app */,
+				ACA578252586967300B967E2 /* HeropediaTests.xctest */,
+				ACA578302586967400B967E2 /* HeropediaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACA578112586967100B967E2 /* Heropedia */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578122586967100B967E2 /* AppDelegate.swift */,
+				ACA578142586967100B967E2 /* SceneDelegate.swift */,
+				ACA578162586967100B967E2 /* ViewController.swift */,
+				ACA578182586967100B967E2 /* Main.storyboard */,
+				ACA5781B2586967300B967E2 /* Assets.xcassets */,
+				ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */,
+				ACA578202586967300B967E2 /* Info.plist */,
+			);
+			path = Heropedia;
+			sourceTree = "<group>";
+		};
+		ACA578282586967300B967E2 /* HeropediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578292586967300B967E2 /* HeropediaTests.swift */,
+				ACA5782B2586967300B967E2 /* Info.plist */,
+			);
+			path = HeropediaTests;
+			sourceTree = "<group>";
+		};
+		ACA578332586967400B967E2 /* HeropediaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578342586967400B967E2 /* HeropediaUITests.swift */,
+				ACA578362586967400B967E2 /* Info.plist */,
+			);
+			path = HeropediaUITests;
+			sourceTree = "<group>";
+		};
+		B2B915276EA8F5C806AFE5B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E31F59418D87C653951C6FD /* Pods-Heropedia.debug.xcconfig */,
+				F94BAA1F6BB78AAF8E216071 /* Pods-Heropedia.release.xcconfig */,
+				577D4E72AFB15D621EA50A9B /* Pods-Heropedia-HeropediaUITests.debug.xcconfig */,
+				99AAD164DB93FBC9BDA88675 /* Pods-Heropedia-HeropediaUITests.release.xcconfig */,
+				F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */,
+				6E06F4A291C914583724A71A /* Pods-HeropediaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACA5780E2586967100B967E2 /* Heropedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA578392586967400B967E2 /* Build configuration list for PBXNativeTarget "Heropedia" */;
+			buildPhases = (
+				E39A388A2F313732A02E4B31 /* [CP] Check Pods Manifest.lock */,
+				ACA5780B2586967100B967E2 /* Sources */,
+				ACA5780C2586967100B967E2 /* Frameworks */,
+				ACA5780D2586967100B967E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Heropedia;
+			productName = Heropedia;
+			productReference = ACA5780F2586967100B967E2 /* Heropedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACA578242586967300B967E2 /* HeropediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA5783C2586967400B967E2 /* Build configuration list for PBXNativeTarget "HeropediaTests" */;
+			buildPhases = (
+				73A9C60428B64894E682A422 /* [CP] Check Pods Manifest.lock */,
+				ACA578212586967300B967E2 /* Sources */,
+				ACA578222586967300B967E2 /* Frameworks */,
+				ACA578232586967300B967E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACA578272586967300B967E2 /* PBXTargetDependency */,
+			);
+			name = HeropediaTests;
+			productName = HeropediaTests;
+			productReference = ACA578252586967300B967E2 /* HeropediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACA5782F2586967400B967E2 /* HeropediaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA5783F2586967400B967E2 /* Build configuration list for PBXNativeTarget "HeropediaUITests" */;
+			buildPhases = (
+				B927B5153821F52A0329C4AB /* [CP] Check Pods Manifest.lock */,
+				ACA5782C2586967400B967E2 /* Sources */,
+				ACA5782D2586967400B967E2 /* Frameworks */,
+				ACA5782E2586967400B967E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACA578322586967400B967E2 /* PBXTargetDependency */,
+			);
+			name = HeropediaUITests;
+			productName = HeropediaUITests;
+			productReference = ACA578302586967400B967E2 /* HeropediaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACA578072586967100B967E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					ACA5780E2586967100B967E2 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					ACA578242586967300B967E2 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = ACA5780E2586967100B967E2;
+					};
+					ACA5782F2586967400B967E2 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = ACA5780E2586967100B967E2;
+					};
+				};
+			};
+			buildConfigurationList = ACA5780A2586967100B967E2 /* Build configuration list for PBXProject "Heropedia" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACA578062586967100B967E2;
+			productRefGroup = ACA578102586967100B967E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACA5780E2586967100B967E2 /* Heropedia */,
+				ACA578242586967300B967E2 /* HeropediaTests */,
+				ACA5782F2586967400B967E2 /* HeropediaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACA5780D2586967100B967E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */,
+				ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */,
+				ACA5781A2586967100B967E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA578232586967300B967E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA5782E2586967400B967E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73A9C60428B64894E682A422 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeropediaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B927B5153821F52A0329C4AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Heropedia-HeropediaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E39A388A2F313732A02E4B31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Heropedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACA5780B2586967100B967E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA578172586967100B967E2 /* ViewController.swift in Sources */,
+				ACA578132586967100B967E2 /* AppDelegate.swift in Sources */,
+				ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA578212586967300B967E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA5782C2586967400B967E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA578352586967400B967E2 /* HeropediaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACA578272586967300B967E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACA5780E2586967100B967E2 /* Heropedia */;
+			targetProxy = ACA578262586967300B967E2 /* PBXContainerItemProxy */;
+		};
+		ACA578322586967400B967E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACA5780E2586967100B967E2 /* Heropedia */;
+			targetProxy = ACA578312586967400B967E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACA578182586967100B967E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACA578192586967100B967E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACA5781E2586967300B967E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACA578372586967400B967E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACA578382586967400B967E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACA5783A2586967400B967E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E31F59418D87C653951C6FD /* Pods-Heropedia.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Heropedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.Heropedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACA5783B2586967400B967E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94BAA1F6BB78AAF8E216071 /* Pods-Heropedia.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Heropedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.Heropedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ACA5783D2586967400B967E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeropediaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.HeropediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heropedia.app/Heropedia";
+			};
+			name = Debug;
+		};
+		ACA5783E2586967400B967E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E06F4A291C914583724A71A /* Pods-HeropediaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeropediaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.HeropediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heropedia.app/Heropedia";
+			};
+			name = Release;
+		};
+		ACA578402586967400B967E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 577D4E72AFB15D621EA50A9B /* Pods-Heropedia-HeropediaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeropediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.HeropediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heropedia;
+			};
+			name = Debug;
+		};
+		ACA578412586967400B967E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99AAD164DB93FBC9BDA88675 /* Pods-Heropedia-HeropediaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeropediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.HeropediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heropedia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACA5780A2586967100B967E2 /* Build configuration list for PBXProject "Heropedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA578372586967400B967E2 /* Debug */,
+				ACA578382586967400B967E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACA578392586967400B967E2 /* Build configuration list for PBXNativeTarget "Heropedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA5783A2586967400B967E2 /* Debug */,
+				ACA5783B2586967400B967E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACA5783C2586967400B967E2 /* Build configuration list for PBXNativeTarget "HeropediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA5783D2586967400B967E2 /* Debug */,
+				ACA5783E2586967400B967E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACA5783F2586967400B967E2 /* Build configuration list for PBXNativeTarget "HeropediaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA578402586967400B967E2 /* Debug */,
+				ACA578412586967400B967E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACA578072586967100B967E2 /* Project object */;
+}
