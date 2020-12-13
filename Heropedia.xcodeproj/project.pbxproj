@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3FD56FDC7C34FB20C7DE7FEB /* Pods_Heropedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31567701E45F45750B23BCE0 /* Pods_Heropedia.framework */; };
 		ACA578132586967100B967E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578122586967100B967E2 /* AppDelegate.swift */; };
 		ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578142586967100B967E2 /* SceneDelegate.swift */; };
-		ACA578172586967100B967E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578162586967100B967E2 /* ViewController.swift */; };
-		ACA5781A2586967100B967E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA578182586967100B967E2 /* Main.storyboard */; };
 		ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781B2586967300B967E2 /* Assets.xcassets */; };
 		ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */; };
 		ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578292586967300B967E2 /* HeropediaTests.swift */; };
 		ACA578352586967400B967E2 /* HeropediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578342586967400B967E2 /* HeropediaUITests.swift */; };
+		ACA578512586973E00B967E2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578502586973E00B967E2 /* MainCoordinator.swift */; };
+		ACA578562586974700B967E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578552586974700B967E2 /* Coordinator.swift */; };
+		ACA5785B2586975100B967E2 /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5785A2586975100B967E2 /* StoryBoarded.swift */; };
+		ACA578622586976800B967E2 /* HeroFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578602586976800B967E2 /* HeroFeedViewModel.swift */; };
+		ACA578632586976800B967E2 /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578612586976800B967E2 /* HeroDetailViewModel.swift */; };
+		ACA5786B2586979300B967E2 /* HeroDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578682586979300B967E2 /* HeroDataSource.swift */; };
+		ACA5786C2586979300B967E2 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578692586979300B967E2 /* RuntimeError.swift */; };
+		ACA5786D2586979300B967E2 /* HeroAPISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5786A2586979300B967E2 /* HeroAPISource.swift */; };
+		ACA578752586980600B967E2 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578722586980600B967E2 /* HeroCollectionViewCell.swift */; };
+		ACA578762586980600B967E2 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578732586980600B967E2 /* HeroDetailViewController.swift */; };
+		ACA578772586980600B967E2 /* HeroFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578742586980600B967E2 /* HeroFeedViewController.swift */; };
+		ACA5789E2586990F00B967E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA5789D2586990F00B967E2 /* Main.storyboard */; };
+		ACA578AA25869A6500B967E2 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578A925869A6500B967E2 /* Hero.swift */; };
+		ACA578B225869D3800B967E2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578B125869D3800B967E2 /* APIResponse.swift */; };
+		ACA578C72586A73E00B967E2 /* HeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578C62586A73E00B967E2 /* HeroDetail.swift */; };
+		ACA578CF2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */; };
 		B1356AC68DE07CAC12BE0ACF /* Pods_Heropedia_HeropediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */; };
 		E217A2C2F8363052306DC533 /* Pods_HeropediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,8 +61,6 @@
 		ACA5780F2586967100B967E2 /* Heropedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heropedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA578122586967100B967E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACA578142586967100B967E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACA578162586967100B967E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACA578192586967100B967E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACA5781B2586967300B967E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA5781E2586967300B967E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA578202586967300B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +70,22 @@
 		ACA578302586967400B967E2 /* HeropediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeropediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA578342586967400B967E2 /* HeropediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeropediaUITests.swift; sourceTree = "<group>"; };
 		ACA578362586967400B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA578502586973E00B967E2 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		ACA578552586974700B967E2 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		ACA5785A2586975100B967E2 /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
+		ACA578602586976800B967E2 /* HeroFeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroFeedViewModel.swift; sourceTree = "<group>"; };
+		ACA578612586976800B967E2 /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
+		ACA578682586979300B967E2 /* HeroDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataSource.swift; sourceTree = "<group>"; };
+		ACA578692586979300B967E2 /* RuntimeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		ACA5786A2586979300B967E2 /* HeroAPISource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAPISource.swift; sourceTree = "<group>"; };
+		ACA578722586980600B967E2 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		ACA578732586980600B967E2 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		ACA578742586980600B967E2 /* HeroFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroFeedViewController.swift; sourceTree = "<group>"; };
+		ACA5789D2586990F00B967E2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ACA578A925869A6500B967E2 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		ACA578B125869D3800B967E2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		ACA578C62586A73E00B967E2 /* HeroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetail.swift; sourceTree = "<group>"; };
+		ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroFeedViewControllerTest.swift; sourceTree = "<group>"; };
 		E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeropediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeropediaTests.debug.xcconfig"; path = "Target Support Files/Pods-HeropediaTests/Pods-HeropediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F94BAA1F6BB78AAF8E216071 /* Pods-Heropedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia.release.xcconfig"; path = "Target Support Files/Pods-Heropedia/Pods-Heropedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,13 +154,14 @@
 		ACA578112586967100B967E2 /* Heropedia */ = {
 			isa = PBXGroup;
 			children = (
-				ACA578122586967100B967E2 /* AppDelegate.swift */,
-				ACA578142586967100B967E2 /* SceneDelegate.swift */,
-				ACA578162586967100B967E2 /* ViewController.swift */,
-				ACA578182586967100B967E2 /* Main.storyboard */,
 				ACA5781B2586967300B967E2 /* Assets.xcassets */,
-				ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */,
 				ACA578202586967300B967E2 /* Info.plist */,
+				ACA578A825869A5800B967E2 /* Model */,
+				ACA578712586980600B967E2 /* View */,
+				ACA5785F2586976800B967E2 /* ViewModel */,
+				ACA5784F2586972A00B967E2 /* Coordinator */,
+				ACA578672586979300B967E2 /* Network */,
+				ACA5784E2586972300B967E2 /* App */,
 			);
 			path = Heropedia;
 			sourceTree = "<group>";
@@ -140,6 +169,7 @@
 		ACA578282586967300B967E2 /* HeropediaTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */,
 				ACA578292586967300B967E2 /* HeropediaTests.swift */,
 				ACA5782B2586967300B967E2 /* Info.plist */,
 			);
@@ -155,6 +185,66 @@
 			path = HeropediaUITests;
 			sourceTree = "<group>";
 		};
+		ACA5784E2586972300B967E2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578122586967100B967E2 /* AppDelegate.swift */,
+				ACA578142586967100B967E2 /* SceneDelegate.swift */,
+				ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */,
+				ACA5785A2586975100B967E2 /* StoryBoarded.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ACA5784F2586972A00B967E2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578552586974700B967E2 /* Coordinator.swift */,
+				ACA578502586973E00B967E2 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		ACA5785F2586976800B967E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578602586976800B967E2 /* HeroFeedViewModel.swift */,
+				ACA578612586976800B967E2 /* HeroDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACA578672586979300B967E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578682586979300B967E2 /* HeroDataSource.swift */,
+				ACA578692586979300B967E2 /* RuntimeError.swift */,
+				ACA5786A2586979300B967E2 /* HeroAPISource.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ACA578712586980600B967E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACA5789D2586990F00B967E2 /* Main.storyboard */,
+				ACA578722586980600B967E2 /* HeroCollectionViewCell.swift */,
+				ACA578732586980600B967E2 /* HeroDetailViewController.swift */,
+				ACA578742586980600B967E2 /* HeroFeedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACA578A825869A5800B967E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACA578A925869A6500B967E2 /* Hero.swift */,
+				ACA578C62586A73E00B967E2 /* HeroDetail.swift */,
+				ACA578B125869D3800B967E2 /* APIResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B2B915276EA8F5C806AFE5B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +255,6 @@
 				F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */,
 				6E06F4A291C914583724A71A /* Pods-HeropediaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -180,6 +269,7 @@
 				ACA5780B2586967100B967E2 /* Sources */,
 				ACA5780C2586967100B967E2 /* Frameworks */,
 				ACA5780D2586967100B967E2 /* Resources */,
+				F152A4D408FBF03CCF7FBC72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +307,7 @@
 				ACA5782C2586967400B967E2 /* Sources */,
 				ACA5782D2586967400B967E2 /* Frameworks */,
 				ACA5782E2586967400B967E2 /* Resources */,
+				68CB454BB135A3B9F4A8781C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,7 +368,7 @@
 			files = (
 				ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */,
 				ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */,
-				ACA5781A2586967100B967E2 /* Main.storyboard in Resources */,
+				ACA5789E2586990F00B967E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +389,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		68CB454BB135A3B9F4A8781C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		73A9C60428B64894E682A422 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +472,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F152A4D408FBF03CCF7FBC72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heropedia/Pods-Heropedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heropedia/Pods-Heropedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Heropedia/Pods-Heropedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -371,8 +496,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA578172586967100B967E2 /* ViewController.swift in Sources */,
+				ACA5786D2586979300B967E2 /* HeroAPISource.swift in Sources */,
+				ACA578512586973E00B967E2 /* MainCoordinator.swift in Sources */,
+				ACA578762586980600B967E2 /* HeroDetailViewController.swift in Sources */,
+				ACA578B225869D3800B967E2 /* APIResponse.swift in Sources */,
+				ACA5786B2586979300B967E2 /* HeroDataSource.swift in Sources */,
+				ACA578562586974700B967E2 /* Coordinator.swift in Sources */,
+				ACA5785B2586975100B967E2 /* StoryBoarded.swift in Sources */,
+				ACA578772586980600B967E2 /* HeroFeedViewController.swift in Sources */,
+				ACA5786C2586979300B967E2 /* RuntimeError.swift in Sources */,
 				ACA578132586967100B967E2 /* AppDelegate.swift in Sources */,
+				ACA578622586976800B967E2 /* HeroFeedViewModel.swift in Sources */,
+				ACA578752586980600B967E2 /* HeroCollectionViewCell.swift in Sources */,
+				ACA578C72586A73E00B967E2 /* HeroDetail.swift in Sources */,
+				ACA578AA25869A6500B967E2 /* Hero.swift in Sources */,
+				ACA578632586976800B967E2 /* HeroDetailViewModel.swift in Sources */,
 				ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA578CF2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift in Sources */,
 				ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,14 +548,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ACA578182586967100B967E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACA578192586967100B967E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

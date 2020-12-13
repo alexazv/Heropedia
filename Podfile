@@ -6,6 +6,9 @@ target 'Heropedia' do
   use_frameworks!
 
   # Pods for Heropedia
+  pod 'SwiftLint'
+  pod 'AlamofireImage', '~> 4.1'
+  pod 'ObjectMapper', '~> 3.5'
 
   target 'HeropediaTests' do
     inherit! :search_paths
