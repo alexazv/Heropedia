@@ -15,6 +15,7 @@ class HeroAPISource: HeroDataSource {
     private let baseUrl = "https://gateway.marvel.com:443/v1/public/"
     private let hash = "aa54262b2709eba1e295dcf8e6ef75ae"
     private let stamp = "heropedia"
+    private let limit = 20
     
     private var parameters: Parameters {
         return [
@@ -24,11 +25,14 @@ class HeroAPISource: HeroDataSource {
         ]
     }
     
-    func getItems(completion: @escaping ([Hero]?, Error?) -> Void) {
+    func getItems(page: Int, completion: @escaping ([Hero]?, Error?) -> Void) {
         
         let url = "\(self.baseUrl)characters"
         
-        AF.request(url, method: .get, parameters: self.parameters)
+        var parameters = self.parameters
+        parameters["offset"] = limit*page
+        
+        AF.request(url, method: .get, parameters: parameters)
             .validate(statusCode: 200..<300)
             .response { response in
             
