@@ -25,7 +25,7 @@ class HeroDetailViewController: UIViewController, StoryBoarded {
     
     func updateViews() {
         heroTitle?.text = viewModel?.hero?.name
-        heroDescription?.text = viewModel?.hero?.description
+        heroDescription?.text = viewModel?.heroDescription
 
         guard let url = viewModel?.hero?.imageUrl else {
             image?.image = nil

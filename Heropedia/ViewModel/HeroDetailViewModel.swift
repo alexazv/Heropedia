@@ -13,6 +13,11 @@ class HeroDetailViewModel {
     private (set) var error: Error?
     private (set) var hero: HeroDetail?
     
+    var heroDescription: String? {
+        guard let description = hero?.description else { return nil }
+        return description.count > 0 ? description : "Description not available"
+    }
+    
     init(heroId: Int, bindToViewController: @escaping () -> Void) {
         self.bindToViewController = bindToViewController
         fetch(heroId: heroId)

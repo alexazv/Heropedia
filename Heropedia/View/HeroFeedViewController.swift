@@ -33,9 +33,7 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
             return
         }
         
-        let startIndex = count - lastCount
-        let endIndex = count
-        let indexPaths = (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+        let indexPaths = (lastCount..<count).map { IndexPath(row: $0, section: 0) }
         
         collectionView?.performBatchUpdates({
             self.collectionView?.insertItems(at: indexPaths)

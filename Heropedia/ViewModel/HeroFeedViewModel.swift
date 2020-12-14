@@ -12,10 +12,8 @@ class HeroFeedViewModel {
     private var dataSource: HeroDataSource = HeroAPISource()
     private (set) var error: Error?
     private (set) var heroes: [Hero] = [] {
-        willSet {
-            lastCount = heroes.count
-        }
         didSet {
+            lastCount = oldValue.count
             if heroes.count > 0 { page += 1 }
         }
     }
