@@ -6,27 +6,45 @@
 //
 
 import XCTest
+@testable import Heropedia
 
 class NetworkTest: XCTestCase {
 
+    var systemUnderTest: HeroDataSource!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        systemUnderTest = HeroAPISource(requestMaker: MockHeroRequestMaker())
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testGetItems() {
+        let expectation = XCTestExpectation(description: "response")
+        systemUnderTest.getItems(page: 0, completion: { heroes, _ in
+            XCTAssertNotNil(heroes)
+            XCTAssertGreaterThan(heroes?.count ?? 0, 0)
+            expectation.fulfill()
+        })
+        
+        wait(for: [expectation], timeout: 2)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testGetDetail() {
+        let expectation = XCTestExpectation(description: "response")
+        systemUnderTest.getItems(page: 0, completion: { hero, _ in
+            XCTAssertNotNil(hero)
+            expectation.fulfill()
+        })
+        
+        wait(for: [expectation], timeout: 2)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testfowardsError() {
+        systemUnderTest = HeroAPISource(requestMaker: MockHeroRequestMaker(returnError: true))
+        let expectation = XCTestExpectation(description: "response")
+        systemUnderTest.getItems(page: 0, completion: { _, error in
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        })
+        
+        wait(for: [expectation], timeout: 2)
     }
-
 }

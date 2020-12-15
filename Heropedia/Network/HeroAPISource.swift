@@ -11,18 +11,34 @@ import ObjectMapper
 
 class HeroAPISource: HeroDataSource {
     
+    private let requestMaker: RequestMaker
     private let apiKey = "3acf0a6200e17381321fef7e2237d020"
     private let baseUrl = "https://gateway.marvel.com:443/v1/public/"
     private let hash = "aa54262b2709eba1e295dcf8e6ef75ae"
     private let stamp = "heropedia"
     private let limit = 20
     
+    init(requestMaker: RequestMaker? = nil) {
+        guard let requestMaker = requestMaker else {
+            self.requestMaker = HTTPRequestMaker()
+            return
+        }
+        self.requestMaker = requestMaker
+    }
+    
     private var parameters: Parameters {
         return [
             "apikey": self.apiKey,
             "ts": self.stamp,
             "hash": self.hash,
+            "limit": self.limit
         ]
+    }
+    
+    private func decode<T: Mappable>(_ type: T.Type, from data: Data) throws -> T? {
+            let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+            let item = Mapper<T>().map(JSONObject: json)
+            return item
     }
     
     func getItems(page: Int, completion: @escaping ([Hero]?, Error?) -> Void) {
@@ -32,54 +48,38 @@ class HeroAPISource: HeroDataSource {
         var parameters = self.parameters
         parameters["offset"] = limit*page
         
-        AF.request(url, method: .get, parameters: parameters)
-            .validate(statusCode: 200..<300)
-            .response { response in
+        requestMaker.request(url, parameters: parameters) { data, error in
             
-                guard response.error == nil else {
-                    completion(nil, response.error)
-                    return
-                }
-                
-                guard let data = response.data else {
-                    completion(nil, RuntimeError("error"))
-                    return
-                }
-                
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
-                    let heroResponse = Mapper<APIResponse<Hero>>().map(JSONObject: json)
-                    completion(heroResponse?.results, nil)
-                } catch let error {
-                    completion(nil, error)
-                }
+            guard let data = data, error == nil else {
+                completion(nil, error)
+                return
             }
+            
+            do {
+                let heroResponse: APIResponse<Hero>? = try self.decode(APIResponse<Hero>.self, from: data)
+                completion(heroResponse?.results, nil)
+            } catch let error {
+                completion(nil, error)
+            }
+        }
     }
     
     func getDetail(heroId: Int, completion: @escaping (HeroDetail?, Error?) -> Void) {
         let url = "\(self.baseUrl)characters/\(heroId)"
         
-        AF.request(url, method: .get, parameters: self.parameters)
-            .validate(statusCode: 200..<300)
-            .response { response in
+        requestMaker.request(url, parameters: parameters) { data, error in
             
-                guard response.error == nil else {
-                    completion(nil, response.error)
-                    return
-                }
-                
-                guard let data = response.data else {
-                    completion(nil, RuntimeError("error"))
-                    return
-                }
-                
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
-                    let heroResponse = Mapper<APIResponse<HeroDetail>>().map(JSONObject: json)
-                    completion(heroResponse?.results?.first, nil)
-                } catch let error {
-                    completion(nil, error)
-                }
+            guard let data = data, error == nil else {
+                completion(nil, error)
+                return
             }
+            
+            do {
+                let heroResponse: APIResponse<HeroDetail>? = try self.decode(APIResponse<HeroDetail>.self, from: data)
+                completion(heroResponse?.results?.first, nil)
+            } catch let error {
+                completion(nil, error)
+            }
+        }
     }
 }

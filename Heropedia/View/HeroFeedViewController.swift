@@ -13,7 +13,6 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     @IBOutlet weak var loadingView: UIView?
     
     weak var coordinator: MainCoordinator?
-    var number: Int?
     
     private var viewModel: HeroFeedViewModel?
     private let reuseIdentifier = "HeroCollectionViewCell"
