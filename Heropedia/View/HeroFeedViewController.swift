@@ -23,11 +23,10 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     }
     
     private func setupViewModel() {
-        viewModel = HeroFeedViewModel(bindToViewController: onViewModelUpdate)
+        viewModel = HeroFeedViewModel(bindToViewController: onViewModelUpdate, bindLoadingChange: updateLoadingView)
     }
     
     private func onViewModelUpdate() {
-        updateLoadingView()
         updateErrorView()
         updateList()
     }

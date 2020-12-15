@@ -58,7 +58,7 @@ class HeroAPISource: HeroDataSource {
             
             do {
                 let heroResponse: APIResponse<Hero>? = try self.decode(APIResponse<Hero>.self, from: data)
-                completion(heroResponse?.results, nil, heroResponse?.total ?? 0 < offset )
+                completion(heroResponse?.results, nil, heroResponse?.total ?? 0 > offset )
             } catch let error {
                 completion(nil, error, false)
             }
