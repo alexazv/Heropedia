@@ -10,6 +10,8 @@ import UIKit
 class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView?
+    @IBOutlet weak var loadingView: UIView?
+    
     weak var coordinator: MainCoordinator?
     var number: Int?
     
@@ -27,15 +29,17 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     
     private func onViewModelUpdate() {
         
+        loadingView?.isHidden = !(viewModel?.loading ?? false)
+        
+        if (viewModel?.loading ?? false) { return }
+        
         guard let count = self.viewModel?.heroes.count,
               let lastCount = self.viewModel?.lastCount,
               count > lastCount else {
             return
         }
         
-        let startIndex = count - lastCount
-        let endIndex = count
-        let indexPaths = (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+        let indexPaths = (lastCount..<count).map { IndexPath(row: $0, section: 0) }
         
         collectionView?.performBatchUpdates({
             self.collectionView?.insertItems(at: indexPaths)

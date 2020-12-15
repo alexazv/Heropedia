@@ -129,6 +129,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC6DBD2C25883526003F6DA0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ACA5789D2586990F00B967E2 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		ACA578062586967100B967E2 = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +235,7 @@
 		ACA578712586980600B967E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ACA5789D2586990F00B967E2 /* Main.storyboard */,
+				AC6DBD2C25883526003F6DA0 /* Storyboard */,
 				ACA578722586980600B967E2 /* HeroCollectionViewCell.swift */,
 				ACA578732586980600B967E2 /* HeroDetailViewController.swift */,
 				ACA578742586980600B967E2 /* HeroFeedViewController.swift */,

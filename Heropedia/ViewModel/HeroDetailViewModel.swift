@@ -12,6 +12,24 @@ class HeroDetailViewModel {
     private var dataSource: HeroDataSource = HeroAPISource()
     private (set) var error: Error?
     private (set) var hero: HeroDetail?
+    var heroSeriesText: String? {
+        guard let series = hero?.seriesCount else { return nil }
+        return "Appears in \(series) comic series"
+    }
+    var heroStoriesText: String? {
+        guard let stories = hero?.storiesCount else { return nil }
+        return "Appears in \(stories) stories"
+    }
+    private (set) var loading = false {
+        didSet {
+            bindToViewController()
+        }
+    }
+    
+    var heroDescription: String? {
+        guard let description = hero?.description else { return nil }
+        return description.count > 0 ? description : "Description not available"
+    }
     
     init(heroId: Int, bindToViewController: @escaping () -> Void) {
         self.bindToViewController = bindToViewController
@@ -19,10 +37,12 @@ class HeroDetailViewModel {
     }
     
     func fetch(heroId: Int) {
+        guard (!loading) else { return }
+        loading = true
         dataSource.getDetail(heroId: heroId) { (hero, error) in
             self.hero = hero
             self.error = error
-            self.bindToViewController()
+            self.loading = false
         }
     }
 }

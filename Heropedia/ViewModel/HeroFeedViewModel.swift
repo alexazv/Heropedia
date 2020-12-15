@@ -12,16 +12,19 @@ class HeroFeedViewModel {
     private var dataSource: HeroDataSource = HeroAPISource()
     private (set) var error: Error?
     private (set) var heroes: [Hero] = [] {
-        willSet {
-            lastCount = heroes.count
-        }
         didSet {
+            lastCount = oldValue.count
             if heroes.count > 0 { page += 1 }
         }
     }
     private (set) var lastCount = 0
+    private (set) var loading = false {
+        didSet {
+            self.bindToViewController()
+        }
+    }
+    
     private var page = 0
-    private var loading = false
     
     init(bindToViewController: @escaping () -> Void) {
         self.bindToViewController = bindToViewController
@@ -41,7 +44,7 @@ class HeroFeedViewModel {
             if let heroes = heroes {
                 self.heroes.append(contentsOf: heroes)
             }
-            self.bindToViewController()
+            
             self.loading = false
         }
     }
