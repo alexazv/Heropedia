@@ -1,0 +1,24 @@
+{
+    "data": {
+        "results": [
+            {
+                "id": 1011194,
+                "name": "Akemi",
+                "description": "",
+                "thumbnail": {
+                    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+                    "extension": "jpg"
+                },
+                "comics": {
+                    "available": 0,
+                },
+                "series": {
+                    "available": 0,
+                },
+                "stories": {
+                    "available": 0,
+                }
+            }
+        ]
+    }
+}

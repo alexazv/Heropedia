@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3FD56FDC7C34FB20C7DE7FEB /* Pods_Heropedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31567701E45F45750B23BCE0 /* Pods_Heropedia.framework */; };
+		AC6DBD3725883ABF003F6DA0 /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DBD3625883ABF003F6DA0 /* RequestMaker.swift */; };
+		AC6DBD3C25883C1F003F6DA0 /* HTTPRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DBD3B25883C1E003F6DA0 /* HTTPRequestMaker.swift */; };
+		AC6DBD41258844F9003F6DA0 /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DBD40258844F9003F6DA0 /* NetworkTest.swift */; };
+		AC6DBD462588456F003F6DA0 /* MockHeroRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DBD452588456F003F6DA0 /* MockHeroRequestMaker.swift */; };
+		AC6DBD4F258847D2003F6DA0 /* MockHero.json in Resources */ = {isa = PBXBuildFile; fileRef = AC6DBD4E258847D2003F6DA0 /* MockHero.json */; };
 		ACA578132586967100B967E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578122586967100B967E2 /* AppDelegate.swift */; };
 		ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578142586967100B967E2 /* SceneDelegate.swift */; };
 		ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781B2586967300B967E2 /* Assets.xcassets */; };
@@ -58,6 +63,11 @@
 		6E06F4A291C914583724A71A /* Pods-HeropediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeropediaTests.release.xcconfig"; path = "Target Support Files/Pods-HeropediaTests/Pods-HeropediaTests.release.xcconfig"; sourceTree = "<group>"; };
 		714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Heropedia_HeropediaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AAD164DB93FBC9BDA88675 /* Pods-Heropedia-HeropediaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia-HeropediaUITests.release.xcconfig"; path = "Target Support Files/Pods-Heropedia-HeropediaUITests/Pods-Heropedia-HeropediaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC6DBD3625883ABF003F6DA0 /* RequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
+		AC6DBD3B25883C1E003F6DA0 /* HTTPRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMaker.swift; sourceTree = "<group>"; };
+		AC6DBD40258844F9003F6DA0 /* NetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
+		AC6DBD452588456F003F6DA0 /* MockHeroRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroRequestMaker.swift; sourceTree = "<group>"; };
+		AC6DBD4E258847D2003F6DA0 /* MockHero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockHero.json; sourceTree = "<group>"; };
 		ACA5780F2586967100B967E2 /* Heropedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heropedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA578122586967100B967E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACA578142586967100B967E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +147,15 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		AC6DBD4D258847BA003F6DA0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				AC6DBD452588456F003F6DA0 /* MockHeroRequestMaker.swift */,
+				AC6DBD4E258847D2003F6DA0 /* MockHero.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		ACA578062586967100B967E2 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +199,7 @@
 				ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */,
 				ACA578292586967300B967E2 /* HeropediaTests.swift */,
 				ACA5782B2586967300B967E2 /* Info.plist */,
+				AC6DBD40258844F9003F6DA0 /* NetworkTest.swift */,
 			);
 			path = HeropediaTests;
 			sourceTree = "<group>";
@@ -225,9 +245,12 @@
 		ACA578672586979300B967E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AC6DBD4D258847BA003F6DA0 /* Mock */,
 				ACA578682586979300B967E2 /* HeroDataSource.swift */,
 				ACA578692586979300B967E2 /* RuntimeError.swift */,
 				ACA5786A2586979300B967E2 /* HeroAPISource.swift */,
+				AC6DBD3625883ABF003F6DA0 /* RequestMaker.swift */,
+				AC6DBD3B25883C1E003F6DA0 /* HTTPRequestMaker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -375,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */,
+				AC6DBD4F258847D2003F6DA0 /* MockHero.json in Resources */,
 				ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */,
 				ACA5789E2586990F00B967E2 /* Main.storyboard in Resources */,
 			);
@@ -505,10 +529,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA5786D2586979300B967E2 /* HeroAPISource.swift in Sources */,
+				AC6DBD462588456F003F6DA0 /* MockHeroRequestMaker.swift in Sources */,
 				ACA578512586973E00B967E2 /* MainCoordinator.swift in Sources */,
 				ACA578762586980600B967E2 /* HeroDetailViewController.swift in Sources */,
 				ACA578B225869D3800B967E2 /* APIResponse.swift in Sources */,
+				AC6DBD3725883ABF003F6DA0 /* RequestMaker.swift in Sources */,
 				ACA5786B2586979300B967E2 /* HeroDataSource.swift in Sources */,
+				AC6DBD3C25883C1F003F6DA0 /* HTTPRequestMaker.swift in Sources */,
 				ACA578562586974700B967E2 /* Coordinator.swift in Sources */,
 				ACA5785B2586975100B967E2 /* StoryBoarded.swift in Sources */,
 				ACA578772586980600B967E2 /* HeroFeedViewController.swift in Sources */,
@@ -528,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA578CF2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift in Sources */,
+				AC6DBD41258844F9003F6DA0 /* NetworkTest.swift in Sources */,
 				ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
