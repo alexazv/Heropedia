@@ -18,7 +18,7 @@ class NetworkTest: XCTestCase {
     
     func testGetItems() {
         let expectation = XCTestExpectation(description: "response")
-        systemUnderTest.getItems(page: 0, completion: { heroes, _ in
+        systemUnderTest.getItems(page: 0, completion: { heroes, _, _ in
             XCTAssertNotNil(heroes)
             XCTAssertGreaterThan(heroes?.count ?? 0, 0)
             expectation.fulfill()
