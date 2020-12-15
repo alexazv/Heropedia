@@ -10,6 +10,8 @@ import UIKit
 class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView?
+    @IBOutlet weak var loadingView: UIView?
+    
     weak var coordinator: MainCoordinator?
     var number: Int?
     
@@ -26,6 +28,10 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     }
     
     private func onViewModelUpdate() {
+        
+        loadingView?.isHidden = !(viewModel?.loading ?? false)
+        
+        if (viewModel?.loading ?? false) { return }
         
         guard let count = self.viewModel?.heroes.count,
               let lastCount = self.viewModel?.lastCount,
