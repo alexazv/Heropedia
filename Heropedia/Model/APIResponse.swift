@@ -9,6 +9,7 @@ import Foundation
 import ObjectMapper
 
 class APIResponse<T: Mappable>: Mappable {
+    var total: Int = 0
     var results: [T]?
     
     required init?(map: Map) {
@@ -17,5 +18,6 @@ class APIResponse<T: Mappable>: Mappable {
     
     func mapping(map: Map) {
         results <- map["data.results"]
+        total <- map["data.total"]
     }
 }

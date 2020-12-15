@@ -41,25 +41,26 @@ class HeroAPISource: HeroDataSource {
             return item
     }
     
-    func getItems(page: Int, completion: @escaping ([Hero]?, Error?) -> Void) {
+    func getItems(page: Int, completion: @escaping ([Hero]?, Error?, Bool) -> Void) {
         
         let url = "\(self.baseUrl)characters"
+        let offset = limit*page
         
         var parameters = self.parameters
-        parameters["offset"] = limit*page
+        parameters["offset"] = offset
         
         requestMaker.request(url, parameters: parameters) { data, error in
             
             guard let data = data, error == nil else {
-                completion(nil, error)
+                completion(nil, error, false)
                 return
             }
             
             do {
                 let heroResponse: APIResponse<Hero>? = try self.decode(APIResponse<Hero>.self, from: data)
-                completion(heroResponse?.results, nil)
+                completion(heroResponse?.results, nil, heroResponse?.total ?? 0 < offset )
             } catch let error {
-                completion(nil, error)
+                completion(nil, error, false)
             }
         }
     }
