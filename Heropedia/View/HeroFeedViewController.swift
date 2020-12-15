@@ -23,15 +23,19 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
     }
     
     private func setupViewModel() {
-        viewModel = HeroFeedViewModel(bindToViewController: onViewModelUpdate)
+        viewModel = HeroFeedViewModel(bindToViewController: onViewModelUpdate, bindLoadingChange: updateLoadingView)
     }
     
     private func onViewModelUpdate() {
-        
+        updateErrorView()
+        updateList()
+    }
+    
+    private func updateLoadingView() {
         loadingView?.isHidden = !(viewModel?.loading ?? false)
-        
-        if (viewModel?.loading ?? false) { return }
-        
+    }
+    
+    private func updateList() {
         guard let count = self.viewModel?.heroes.count,
               let lastCount = self.viewModel?.lastCount,
               count > lastCount else {
@@ -43,6 +47,18 @@ class HeroFeedViewController: UIViewController, StoryBoarded, UICollectionViewDe
         collectionView?.performBatchUpdates({
             self.collectionView?.insertItems(at: indexPaths)
         })
+    }
+    
+    private func updateErrorView() {
+        guard viewModel?.error != nil else {
+            return
+        }
+        
+        let alert = UIAlertController(title: "Error", message: viewModel?.errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .default, handler:  { _ in
+            self.viewModel?.onErrorConfirm()
+        }))
+        self.present(alert, animated: true)
     }
     
     private func onItemClick(index: Int) {

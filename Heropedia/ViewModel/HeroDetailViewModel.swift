@@ -9,7 +9,8 @@ import UIKit
 
 class HeroDetailViewModel {
     var bindToViewController: (() -> Void) = {}
-    private var dataSource: HeroDataSource = HeroAPISource()
+    private var dataSource: HeroDataSource = DataSource.heroDataSource()
+    private var heroId: Int
     private (set) var error: Error?
     private (set) var hero: HeroDetail?
     var heroSeriesText: String? {
@@ -26,6 +27,15 @@ class HeroDetailViewModel {
         }
     }
     
+    var errorMessage: String {
+        "There was an error retrieving info"
+    }
+    
+    func onErrorConfirm() {
+        error = nil
+        fetch()
+    }
+    
     var heroDescription: String? {
         guard let description = hero?.description else { return nil }
         return description.count > 0 ? description : "Description not available"
@@ -33,11 +43,12 @@ class HeroDetailViewModel {
     
     init(heroId: Int, bindToViewController: @escaping () -> Void) {
         self.bindToViewController = bindToViewController
-        fetch(heroId: heroId)
+        self.heroId = heroId
+        fetch()
     }
     
-    func fetch(heroId: Int) {
-        guard (!loading) else { return }
+    func fetch() {
+        guard error == nil && !loading else { return }
         loading = true
         dataSource.getDetail(heroId: heroId) { (hero, error) in
             self.hero = hero

@@ -17,7 +17,6 @@
 		ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578142586967100B967E2 /* SceneDelegate.swift */; };
 		ACA5781C2586967300B967E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781B2586967300B967E2 /* Assets.xcassets */; };
 		ACA5781F2586967300B967E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA5781D2586967300B967E2 /* LaunchScreen.storyboard */; };
-		ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578292586967300B967E2 /* HeropediaTests.swift */; };
 		ACA578352586967400B967E2 /* HeropediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578342586967400B967E2 /* HeropediaUITests.swift */; };
 		ACA578512586973E00B967E2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578502586973E00B967E2 /* MainCoordinator.swift */; };
 		ACA578562586974700B967E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578552586974700B967E2 /* Coordinator.swift */; };
@@ -35,6 +34,7 @@
 		ACA578B225869D3800B967E2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578B125869D3800B967E2 /* APIResponse.swift */; };
 		ACA578C72586A73E00B967E2 /* HeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578C62586A73E00B967E2 /* HeroDetail.swift */; };
 		ACA578CF2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */; };
+		ACCB2920258963C600C85D4D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB291F258963C600C85D4D /* DataSource.swift */; };
 		B1356AC68DE07CAC12BE0ACF /* Pods_Heropedia_HeropediaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714A79822AE07D1C323EA305 /* Pods_Heropedia_HeropediaUITests.framework */; };
 		E217A2C2F8363052306DC533 /* Pods_HeropediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +75,6 @@
 		ACA5781E2586967300B967E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA578202586967300B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA578252586967300B967E2 /* HeropediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeropediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACA578292586967300B967E2 /* HeropediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeropediaTests.swift; sourceTree = "<group>"; };
 		ACA5782B2586967300B967E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA578302586967400B967E2 /* HeropediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeropediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA578342586967400B967E2 /* HeropediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeropediaUITests.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		ACA578B125869D3800B967E2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		ACA578C62586A73E00B967E2 /* HeroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetail.swift; sourceTree = "<group>"; };
 		ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroFeedViewControllerTest.swift; sourceTree = "<group>"; };
+		ACCB291F258963C600C85D4D /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		E8C3A5C1F42C1443D3FE5465 /* Pods_HeropediaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeropediaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6445E33775CB265B022F103 /* Pods-HeropediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeropediaTests.debug.xcconfig"; path = "Target Support Files/Pods-HeropediaTests/Pods-HeropediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F94BAA1F6BB78AAF8E216071 /* Pods-Heropedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heropedia.release.xcconfig"; path = "Target Support Files/Pods-Heropedia/Pods-Heropedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				ACA578CE2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift */,
-				ACA578292586967300B967E2 /* HeropediaTests.swift */,
 				ACA5782B2586967300B967E2 /* Info.plist */,
 				AC6DBD40258844F9003F6DA0 /* NetworkTest.swift */,
 			);
@@ -251,6 +250,7 @@
 				ACA5786A2586979300B967E2 /* HeroAPISource.swift */,
 				AC6DBD3625883ABF003F6DA0 /* RequestMaker.swift */,
 				AC6DBD3B25883C1E003F6DA0 /* HTTPRequestMaker.swift */,
+				ACCB291F258963C600C85D4D /* DataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -546,6 +546,7 @@
 				ACA578C72586A73E00B967E2 /* HeroDetail.swift in Sources */,
 				ACA578AA25869A6500B967E2 /* Hero.swift in Sources */,
 				ACA578632586976800B967E2 /* HeroDetailViewModel.swift in Sources */,
+				ACCB2920258963C600C85D4D /* DataSource.swift in Sources */,
 				ACA578152586967100B967E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,7 +557,6 @@
 			files = (
 				ACA578CF2586AC8F00B967E2 /* HeroFeedViewControllerTest.swift in Sources */,
 				AC6DBD41258844F9003F6DA0 /* NetworkTest.swift in Sources */,
-				ACA5782A2586967300B967E2 /* HeropediaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

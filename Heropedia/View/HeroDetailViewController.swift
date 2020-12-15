@@ -23,7 +23,24 @@ class HeroDetailViewController: UIViewController, StoryBoarded {
     }
     
     func setup(heroId: Int) {
-        viewModel = HeroDetailViewModel(heroId: heroId, bindToViewController: updateViews)
+        viewModel = HeroDetailViewModel(heroId: heroId, bindToViewController: onViewModelUpdate)
+    }
+    
+    private func onViewModelUpdate() {
+        updateErrorView()
+        updateViews()
+    }
+    
+    private func updateErrorView() {
+        guard viewModel?.error != nil else {
+            return
+        }
+        
+        let alert = UIAlertController(title: "Error", message: viewModel?.errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .default, handler:  { _ in
+            self.viewModel?.onErrorConfirm()
+        }))
+        self.present(alert, animated: true)
     }
     
     func updateViews() {

@@ -18,7 +18,7 @@ class NetworkTest: XCTestCase {
     
     func testGetItems() {
         let expectation = XCTestExpectation(description: "response")
-        systemUnderTest.getItems(page: 0, completion: { heroes, _ in
+        systemUnderTest.getItems(page: 0, completion: { heroes, _, _ in
             XCTAssertNotNil(heroes)
             XCTAssertGreaterThan(heroes?.count ?? 0, 0)
             expectation.fulfill()
@@ -29,7 +29,7 @@ class NetworkTest: XCTestCase {
     
     func testGetDetail() {
         let expectation = XCTestExpectation(description: "response")
-        systemUnderTest.getItems(page: 0, completion: { hero, _ in
+        systemUnderTest.getItems(page: 0, completion: { hero, _, _ in
             XCTAssertNotNil(hero)
             expectation.fulfill()
         })
@@ -40,7 +40,7 @@ class NetworkTest: XCTestCase {
     func testfowardsError() {
         systemUnderTest = HeroAPISource(requestMaker: MockHeroRequestMaker(returnError: true))
         let expectation = XCTestExpectation(description: "response")
-        systemUnderTest.getItems(page: 0, completion: { _, error in
+        systemUnderTest.getItems(page: 0, completion: { _, error, _ in
             XCTAssertNotNil(error)
             expectation.fulfill()
         })
