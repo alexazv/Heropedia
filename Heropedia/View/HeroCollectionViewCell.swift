@@ -15,8 +15,8 @@ class HeroCollectionViewCell: UICollectionViewCell {
     func setup(hero: Hero?) {
         label?.text = hero?.name
         
+        image?.image = nil
         guard let url = hero?.imageUrl else {
-            image?.image = nil
             return
         }
         
